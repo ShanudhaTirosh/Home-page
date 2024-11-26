@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub Pro - Developer Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-hover:hover .icon {
+            transform: translateZ(20px) scale(1.2);
+            color: #60A5FA;
+        }
+
+        .icon {
+            transition: all 0.3s ease;
+        }
+
+        .grid-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .datetime-widget {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: float 6s ease-in-out infinite;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="glass fixed w-full z-50 px-4 py-2">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center">
+                <i class="fas fa-code-branch mr-2 hover-rotate"></i>
+                DevHub Pro
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="about-page.html" class="text-white hover:text-blue-400 transition-colors">About Me</a>
+                <a href="#ai-tools" class="text-white hover:text-blue-400 transition-colors">AI Tools</a>
+                <a href="#dev-tools" class="text-white hover:text-blue-400 transition-colors">Dev Tools</a>
+                <a href="#education" class="text-white hover:text-blue-400 transition-colors">Education</a>
+                <a href="#cloud" class="text-white hover:text-blue-400 transition-colors">Cloud Services</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-20 container mx-auto px-4">
+        <!-- Date and Time Widget -->
+        <div class="datetime-widget">
+            <div id="time" class="text-5xl font-bold mb-2 text-blue-400"></div>
+            <div id="date" class="text-xl text-gray-300"></div>
+            <div id="timezone" class="text-sm text-gray-400 mt-2"></div>
+        </div>
+
+   <!-- Main Content -->
+    <div class="pt-20 container mx-auto px-4">
+        <!-- Programming & Development Platforms -->
+        <section id="dev-platforms" class="mb-12 animate-slide-up">
+            <h2 class="text-2xl font-bold mb-6">Programming & Development Platforms</h2>
+            <div class="grid-card">
+                <a href="https://github.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-github text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">GitHub</h3>
+                    <p class="text-sm text-gray-400">Code Hosting</p>
+                </a>
+                <a href="https://gitlab.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-gitlab text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">GitLab</h3>
+                    <p class="text-sm text-gray-400">DevOps Collaboration</p>
+                </a>
+                <a href="https://stackoverflow.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-stack-overflow text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">Stack Overflow</h3>
+                    <p class="text-sm text-gray-400">Programming Q&A</p>
+                </a>
+                <a href="https://replit.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fas fa-code text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">Replit</h3>
+                    <p class="text-sm text-gray-400">Code Collaboration</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- AI & Cloud Platforms -->
+        <section id="ai-cloud" class="mb-12 animate-slide-up">
+            <h2 class="text-2xl font-bold mb-6">AI & Cloud Platforms</h2>
+            <div class="grid-card">
+                <a href="https://chat.openai.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fas fa-robot text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">ChatGPT</h3>
+                    <p class="text-sm text-gray-400">AI Chat Assistant</p>
+                </a>
+                <a href="https://cloud.google.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-google text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">Google Cloud</h3>
+                    <p class="text-sm text-gray-400">Cloud Services</p>
+                </a>
+                <a href="https://aws.amazon.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-aws text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">AWS</h3>
+                    <p class="text-sm text-gray-400">Amazon Cloud Solutions</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section id="social-media" class="mb-12 animate-slide-up">
+            <h2 class="text-2xl font-bold mb-6">Social Media</h2>
+            <div class="grid-card">
+                <a href="https://facebook.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-facebook text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">Facebook</h3>
+                    <p class="text-sm text-gray-400">Social Networking</p>
+                </a>
+                <a href="https://web.whatsapp.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-whatsapp text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">WhatsApp</h3>
+                    <p class="text-sm text-gray-400">Messaging Platform</p>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-youtube text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">YouTube</h3>
+                    <p class="text-sm text-gray-400">Video Sharing</p>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fab fa-linkedin text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">LinkedIn</h3>
+                    <p class="text-sm text-gray-400">Professional Networking</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Learning Platforms -->
+        <section id="learning" class="mb-12 animate-slide-up">
+            <h2 class="text-2xl font-bold mb-6">Learning Platforms</h2>
+            <div class="grid-card">
+                <a href="https://khanacademy.org" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fas fa-book text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">Khan Academy</h3>
+                    <p class="text-sm text-gray-400">Free Online Learning</p>
+                </a>
+                <a href="https://dpeducation.lk" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fas fa-school text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">DP IT Campus</h3>
+                    <p class="text-sm text-gray-400">Tech Education</p>
+                </a>
+                <a href="https://w3schools.com" target="_blank" class="glass card-hover p-6 text-center">
+                    <i class="fas fa-code text-4xl mb-4 icon"></i>
+                    <h3 class="text-xl mb-2">W3Schools</h3>
+                    <p class="text-sm text-gray-400">Web Development</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Combined Example Section -->
+        <section id="example-combined" class="mb-12 animate-slide-up">
+            <h2 class="text-2xl font-bold mb-6">Example Combined Links</h2>
+            <div class="icon-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://replit.com" target="_blank"><i class="fas fa-code"></i> Replit</a>
+                <a href="https://chat.openai.com" target="_blank"><i class="fas fa-robot"></i> ChatGPT</a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass mt-12 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DevHub Pro</h3>
+                    <p class="text-gray-400">Your ultimate developer resource hub for AI, cloud, and professional tools.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#ai-tools" class="text-gray-400 hover:text-blue-400">AI Tools</a></li>
+                        <li><a href="#dev-tools" class="text-gray-400 hover:text-blue-400">Dev Tools</a></li>
+                        <li><a href="#education" class="text-gray-400 hover:text-blue-400">Education</a></li>
+                        <li><a href="#cloud" class="text-gray-400 hover:text-blue-400">Cloud Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:support@devhubpro.com" class="text-gray-400 hover:text-blue-400">Email Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Discord Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your email" 
+                               class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-blue-500">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded w-full transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 DevHub Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Date and Time Script -->
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('time');
+            const dateElement = document.getElementById('date');
+            const timezoneElement = document.getElementById('timezone');
+
+            timeElement.textContent = now.toLocaleTimeString();
+            dateElement.textContent = now.toLocaleDateString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            timezoneElement.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
