@@ -121,6 +121,38 @@ footer {
     color: var(--text-secondary);
 }
 
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        footer h3, footer h4 {
+            color: #000;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #007bff;
+        }
+
+  .datetime-widget {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: float 6s ease-in-out infinite;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 2rem;
+            
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .glass-card {
@@ -163,22 +195,31 @@ footer {
                 </div>
             </form>
         </div>
+          <div class="pt-20 container mx-auto px-4">
+        <!-- Date and Time Widget -->
+        <div class="datetime-widget">
+            <div id="time" class="text-5xl font-bold mb-2 text-blue-400"></div>
+            <div id="date" class="text-xl text-gray-300"></div>
+            <div id="timezone" class="text-sm text-gray-400 mt-2"></div>
+        </div>
 
         <!-- Dev Platforms Section -->
         <section id="dev-platforms" class="mb-5 animate-fade-in">
             <h2 class="category-title">Professional Development Platforms</h2>
             <div class="row">
                 <div class="col-md-3 mb-4">
-                    <div class="card glass-card text-center p-4">
+                     <div class="card glass-card text-center p-4">
                         <i class="fab fa-github card-icon"></i>
-                        <h4>GitHub</h4>
-                        <p class="text-muted">Advanced Code Hosting</p>
+                        <h4>GitLab</h4>
+                        <a href="https://github.com/" target="_blank" class="btn btn-primary">Visit GitLab</a>
+                        <p class="text-muted">Enterprise DevOps</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card glass-card text-center p-4">
                         <i class="fab fa-gitlab card-icon"></i>
                         <h4>GitLab</h4>
+                        <a href="https://gitlab.com/" target="_blank" class="btn btn-primary">Visit GitLab</a>
                         <p class="text-muted">Enterprise DevOps</p>
                     </div>
                 </div>
@@ -186,6 +227,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-code card-icon"></i>
                         <h4>Bitbucket</h4>
+                        <a href="https://bitbucket.org" target="_blank" class="btn btn-primary">Visit Bitbucket</a>
                         <p class="text-muted">Professional Collaboration</p>
                     </div>
                 </div>
@@ -193,6 +235,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-laptop-code card-icon"></i>
                         <h4>Azure DevOps</h4>
+                        <a href="https://azure.microsoft.com/en-us/services/devops/" target="_blank" class="btn btn-primary">Visit Azure DevOps</a>
                         <p class="text-muted">Enterprise Solutions</p>
                     </div>
                 </div>
@@ -207,6 +250,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-brain card-icon"></i>
                         <h4>Gemini AI</h4>
+                        <a href="https://ai.google" target="_blank" class="btn btn-primary">Visit Gemini AI</a>
                         <p class="text-muted">Google AI Solutions</p>
                     </div>
                 </div>
@@ -214,6 +258,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fab fa-aws card-icon"></i>
                         <h4>AWS</h4>
+                        <a href="https://aws.amazon.com" target="_blank" class="btn btn-primary">Visit AWS</a>
                         <p class="text-muted">Enterprise Cloud</p>
                     </div>
                 </div>
@@ -221,6 +266,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-robot card-icon"></i>
                         <h4>Hugging Face</h4>
+                        <a href="https://huggingface.co" target="_blank" class="btn btn-primary">Visit Hugging Face</a>
                         <p class="text-muted">AI Model Hub</p>
                     </div>
                 </div>
@@ -236,7 +282,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fab fa-github card-icon"></i>
                         <h4>GitHub</h4>
-                        <a href="https://github.com/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                        <a href="https://github.com/shanudhatirosh" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
                     </div>
                 </div>
                 <div class="col-md-3 mb-4">
@@ -270,6 +316,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-graduation-cap card-icon"></i>
                         <h4>Coursera</h4>
+                        <a href="https://www.coursera.org" target="_blank" class="btn btn-primary">Visit Coursera</a>
                         <p class="text-muted">Professional Certifications</p>
                     </div>
                 </div>
@@ -277,6 +324,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-code card-icon"></i>
                         <h4>edX</h4>
+                        <a href="https://www.edx.org" target="_blank" class="btn btn-primary">Visit edX</a>
                         <p class="text-muted">University-Level Tech Courses</p>
                     </div>
                 </div>
@@ -284,6 +332,7 @@ footer {
                     <div class="card glass-card text-center p-4">
                         <i class="fas fa-desktop card-icon"></i>
                         <h4>Pluralsight</h4>
+                        <a href="https://www.pluralsight.com" target="_blank" class="btn btn-primary">Visit Pluralsight</a>
                         <p class="text-muted">Tech Skills Platform</p>
                     </div>
                 </div>
@@ -299,21 +348,21 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-github card-icon"></i>
                 <h4>GitHub</h4>
-                <a href="https://github.com/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                <a href="https://github.com/shanudhatirosh" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-gitlab card-icon"></i>
                 <h4>GitLab</h4>
-                <a href="https://gitlab.com/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                <a href="https://gitlab.com/ShanudhaTirosh" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-bitbucket card-icon"></i>
                 <h4>Bitbucket</h4>
-                <a href="https://bitbucket.org/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                <a href="https://bitbucket.org/" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
@@ -334,28 +383,28 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-code card-icon"></i>
                 <h4>LeetCode</h4>
-                <a href="https://leetcode.com/yourusername" target="_blank" class="btn btn-outline-primary mt-3">Coding Challenges</a>
+                <a href="https://leetcode.com/" target="_blank" class="btn btn-outline-primary mt-3">Coding Challenges</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-terminal card-icon"></i>
                 <h4>Codewars</h4>
-                <a href="https://www.codewars.com/users/yourusername" target="_blank" class="btn btn-outline-primary mt-3">Coding Challenges</a>
+                <a href="https://www.codewars.com/dashboard" target="_blank" class="btn btn-outline-primary mt-3">Coding Challenges</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-crown card-icon"></i>
                 <h4>TopCoder</h4>
-                <a href="https://www.topcoder.com/members/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                <a href="https://www.topcoder.com/home" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
             </div>
         </div>
         <div class="col-md-3 mb-4">
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-code card-icon"></i>
                 <h4>Coderbyte</h4>
-                <a href="https://coderbyte.com/profile/yourusername" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
+                <a href="https://coderbyte.com/" target="_blank" class="btn btn-outline-primary mt-3">View Profile</a>
             </div>
         </div>
     </div>
@@ -369,6 +418,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-school card-icon"></i>
                 <h4>W3Schools</h4>
+                <a href="https://www.w3schools.com/" target="_blank" class="btn btn-primary">Visit W3Schools</a>
                 <p class="text-muted">Web Development Tutorials</p>
             </div>
         </div>
@@ -376,6 +426,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-book card-icon"></i>
                 <h4>MDN Web Docs</h4>
+                <a href="https://developer.mozilla.org/en-US/" target="_blank" class="btn btn-primary">Visit MDN Web Docs</a>
                 <p class="text-muted">Web Technology Documentation</p>
             </div>
         </div>
@@ -383,6 +434,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-free-code-camp card-icon"></i>
                 <h4>freeCodeCamp</h4>
+                <a href="https://www.freecodecamp.org/" target="_blank" class="btn btn-primary">Visit freeCodeCamp</a>
                 <p class="text-muted">Free Programming Courses</p>
             </div>
         </div>
@@ -397,6 +449,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-dev card-icon"></i>
                 <h4>Dev.to</h4>
+                <a href="https://dev.to" target="_blank" class="btn btn-primary">Visit Dev.to</a>
                 <p class="text-muted">Developer Community</p>
             </div>
         </div>
@@ -404,6 +457,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-rocket card-icon"></i>
                 <h4>Product Hunt</h4>
+                <a href="https://www.producthunt.com" target="_blank" class="btn btn-primary">Visit Product Hunt</a>
                 <p class="text-muted">Discover New Tools</p>
             </div>
         </div>
@@ -411,6 +465,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-codepen card-icon"></i>
                 <h4>CodePen</h4>
+                <a href="https://codepen.io" target="_blank" class="btn btn-primary">Visit CodePen</a>
                 <p class="text-muted">Creative Coding Projects</p>
             </div>
         </div>
@@ -425,13 +480,15 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fab fa-linkedin card-icon"></i>
                 <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary">Visit LinkedIn</a>
                 <p class="text-muted">Professional Networking</p>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card glass-card text-center p-4">
-                <i class="fab fa-upwork card-icon"></i>
+                <i class="fab fa-globe card-icon"></i>
                 <h4>Upwork</h4>
+                <a href="https://www.upwork.com" target="_blank" class="btn btn-primary">Visit Upwork</a>
                 <p class="text-muted">Freelance Jobs</p>
             </div>
         </div>
@@ -439,6 +496,7 @@ footer {
             <div class="card glass-card text-center p-4">
                 <i class="fas fa-briefcase card-icon"></i>
                 <h4>Freelancer</h4>
+                <a href="https://www.freelancer.com" target="_blank" class="btn btn-primary">Visit Freelancer</a>
                 <p class="text-muted">Freelance Opportunities</p>
             </div>
         </div>
@@ -464,31 +522,44 @@ footer {
      </div>
     
 
-    <!-- Footer -->
-    <footer class="container-fluid py-5 mt-5">
+
+<!-- Footer Section -->
+    <footer class="glass mt-12 py-8">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-white mb-3">DevHub Pro</h4>
-                    <p class="text-muted">Empowering professional developers with world-class resources and technologies.</p>
+                <div class="col-md-3">
+                    <h3 class="text-xl font-bold mb-4">DevHub Pro</h3>
+                    <p class="text-gray-400">Your ultimate developer resource hub for AI, cloud, and professional tools.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-white mb-3">Quick Links</h4>
+                <div class="col-md-3">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#dev-platforms" class="text-muted">Development Platforms</a></li>
-                        <li><a href="#ai-cloud" class="text-muted">AI & Cloud Services</a></li>
-                        <li><a href="#learning" class="text-muted">Learning Resources</a></li>
-                        <li><a href="#about-us" class="text-muted">About Us</a></li>
+                        <li><a href="#dev-platforms">Development Platforms</a></li>
+                        <li><a href="#ai-cloud">AI & Cloud Services</a></li>
+                        <li><a href="#learning">Learning Resources</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="https://shanudhatirosh.github.io/About-me/">About Me</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-white mb-3">Connect</h4>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                <div class="col-md-3">
+                    <h4 class="mb-3">Connect</h4>
+                    <div>
+                        <a href="https://github.com/ShanudhaTirosh" class="me-3"><i class="fab fa-github"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Enter your email" 
+                               class="form-control mb-3">
+                        <button class="btn btn-primary w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-top text-center">
+                <p>&copy; 2024 DevHub Pro. All rights reserved. Design and Developed By Shanudha Tirosh</p>
             </div>
         </div>
     </footer>
@@ -497,6 +568,7 @@ footer {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
+    
         // Advanced Search Functionality
         document.getElementById('global-search').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -537,6 +609,25 @@ footer {
                 document.getElementById('global-search').submit();
             }
         });
+        function updateDateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('time');
+            const dateElement = document.getElementById('date');
+            const timezoneElement = document.getElementById('timezone');
+
+            timeElement.textContent = now.toLocaleTimeString();
+            dateElement.textContent = now.toLocaleDateString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            timezoneElement.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+        
     </script>
 </body>
 </html>
